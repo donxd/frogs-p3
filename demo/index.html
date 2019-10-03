@@ -33,6 +33,19 @@
           <frogs-p3 id='test_config' config></frogs-p3>
         </template>
       </demo-snippet>
+      <label for='external_boxes'>External boxes:</label>
+      <input type="number" id='external_boxes' min='1'><br/>
+      <button id='change_config'>Change config</button>
     </div>
   </body>
+  <script type="text/javascript">
+    window.onload = () => {
+      document.getElementById('change_config').addEventListener('click', changeConfig, true);
+    };
+
+    function changeConfig (){
+      const boxes = parseInt(document.getElementById('external_boxes').value);
+      document.getElementById('test_config').setAttribute('boxes', boxes);
+    }
+  </script>
 </html>
