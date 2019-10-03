@@ -8,8 +8,7 @@
   "builds": [
     {
       "name": "deploy",
-      "preset": "uncompiled-unbundled",
-      "browserCapabilities": ["es2018", "modules"],
+      "preset": "es6-bundled",
       "addServiceWorker": false,
       "addPushManifest": false
     }
