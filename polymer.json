@@ -1,4 +1,19 @@
 {
+  "entrypoint": "index-deploy.html",
+  "sources": [
+    "frogs-p3.js",
+    "images/*",
+    "package.json"
+  ],
+  "builds": [
+    {
+      "name": "deploy",
+      "preset": "uncompiled-unbundled",
+      "browserCapabilities": ["es2018", "modules"],
+      "addServiceWorker": false,
+      "addPushManifest": false
+    }
+  ],
   "npm": true,
   "lint": {
     "rules": [
